@@ -2,14 +2,14 @@ Die bob;
 void setup()
 {
 	noLoop();
-	size(300,300);
+	size(510,550);
 	bob = new Die(20,20);
 }
 void draw()
 {
-	for (int x = 10; x <= 280; x+=30){
-		for(int y = 10; y <= 280; y+=30){
-			rect(x, y, 20, 20);
+	for (int x = 10; x <= 460; x+=50){
+		for(int y = 10; y <= 460; y+=50){
+			rect(x, y, 40, 40);
 		}
 	}
 	bob.roll();
@@ -34,6 +34,8 @@ class Die //models one single dice cube
 	void roll()
 	{
 		//your code here
+		myX = myX + 10;
+		myY = myY + 10;
 		ellipse(myX,myY,10,10);
 
 
